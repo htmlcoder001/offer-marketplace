@@ -1128,6 +1128,7 @@ header {
 }
 .stores-platform__button {
   height: 34px;
+  width: 100%;
   padding: 8px 24px;
   background: #50b64a;
   color: #fff;
@@ -1161,6 +1162,7 @@ header {
 }
 .stores-shop__button {
   height: 34px;
+  width: 100%;
   padding: 8px 24px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
