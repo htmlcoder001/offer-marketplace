@@ -841,6 +841,7 @@ header {
   border-bottom: 1px solid #541dc9;
 }
 
+
 /* Offer nav */
 #offer_nav {
   border-bottom: 1px solid #e8e8e8;
@@ -1143,6 +1144,7 @@ header {
   font-size: 14px;
   line-height: 18px;
   margin-top: 16px;
+  cursor: pointer;
 }
 .stores-platform__button:hover {
   background-color: #43993e;
@@ -1177,6 +1179,7 @@ header {
   line-height: 18px;
   background: #1c7ece;
   margin-top: 16px;
+  cursor: pointer;
 }
 .stores-shop__button:hover {
   background: #1768aa;
@@ -1894,6 +1897,79 @@ header {
 }
 
 /* Else */
+.--added-to-cart {
+  display: none;
+}
+.--added-to-cart + .card-button_added {
+  display: grid;
+}
+.card-button_added {
+  display: none;
+  align-items: center;
+  justify-content: start;
+  grid-template-columns: 1fr 42px;
+  grid-gap: 8px;
+}
+.card-added__text {
+  background-color: #50b64a;
+  padding: 12px 40px;
+  width: 100%;
+  height: 42px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-added__text:hover {
+  background-color: #43993e;
+}
+.card-added__button {
+  width: 42px;
+  height: 42px;
+  background-color: #333333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+.stores-item__offer .card-added__text,
+.viewed-box__item .card-added__text {
+  height: 34px;
+  padding: 8px 16px;
+  font-size: 11px;
+}
+.stores-item__offer .card-added__button,
+.viewed-box__item .card-added__button {
+  width: 34px;
+  height: 34px;
+}
+.stores-item__offer .card-button_added,
+.viewed-box__item .card-button_added {
+  grid-template-columns: 1fr 34px;
+  margin-top: 16px;
+}
+
+.viewed-box__item .card-button_added {
+  width: calc(100% - 32px);
+  margin: 8px auto 0 auto;
+}
+
+
 .modal-overlay {
   position: fixed;
   background-color: rgba(0,0,0,0.75);

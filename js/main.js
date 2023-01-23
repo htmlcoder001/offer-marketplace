@@ -175,7 +175,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         //$send_order.innerHTML = '<button type="button" class="btn btn-success">Оформить заказ</button>';
         for (let i=0; i < $count.length; i++) {
-          $count[i].innerHTML = cartLS.list().length;
+          // $count[i].innerHTML = cartLS.list().length;
+          $count[i].innerHTML = items.reduce((sum, item) => sum + item.quantity, 0);
         }
       }
 
