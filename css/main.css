@@ -579,7 +579,6 @@ header {
   white-space: nowrap;
   max-width: 70%;
   margin-left: 4px;
-  cursor: pointer;
   color: #1c7ece;
   background-color: transparent;
 }
@@ -652,8 +651,27 @@ header {
   position: relative;
   border-radius: 2px;
   background-color: #ebf7e9;
-  padding: 2px 4px 2px 24px;
+  padding: 2px 8px 2px 24px;
   color: #295f27;
+}
+.card-overlaps__item:before {
+  content: '';
+  display: block;
+  width: 13px;
+  height: 15px;
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 3px;
+  left: 6px;
+}
+.--overlaps-point:before {
+  background-image: url(../img/icons/icon-point.png);
+}
+.--overlaps-idea:before {
+  background-image: url(../img/icons/icon-idea.png);
 }
 .card-seller__delivery {
   display: flex;
@@ -665,6 +683,25 @@ header {
   position: relative;
   padding-left: 33px;
   font-size: 14px;
+}
+.card-delivery__item:before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.--delivery-car:before {
+  background-image: url(../img/icons/icon-delivery.png);
+}
+.--delivery-time:before {
+  background-image: url(../img/icons/icon-time.png);
 }
 .card-delivery__title {
   color: #707070;
@@ -772,6 +809,26 @@ header {
   color: #000;
   padding-left: 24px;
   display: block;
+  position: relative;
+}
+.card-security__title:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -5px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-image: url(../img/icons/icon-waranty.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: contain;
+  background-size: contain;
+  width: 25px;
+  height: 25px;
 }
 .card-security__text {
   margin-bottom: 4px;
