@@ -306,6 +306,7 @@ header {
   justify-content: flex-start;
   padding: 16px;
   position: relative;
+  gap: 8px;
 }
 
 .header-cart__image {
