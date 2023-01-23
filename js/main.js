@@ -100,6 +100,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   })();
 
+  /* cartJS init */
+
   
   /* Functions init */
   window.addEventListener('load', fixOfferNav);
