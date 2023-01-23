@@ -33,10 +33,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* Stick offer nav on scroll */
-  const fixOfferNav = () => {
-      let scrollPosY = window.pageYOffset | document.body.scrollTop,
-          offer_nav_pos = WebT.elements.offer_nav.getBoundingClientRect().top + window.scrollY,
-          offer_nav_height = WebT.elements.offer_nav.offsetHeight;
+
+  if (WebT.elements.offer_nav) {
+    let offer_nav_pos = WebT.elements.offer_nav.getBoundingClientRect().top + window.scrollY,
+      offer_nav_height = WebT.elements.offer_nav.offsetHeight;
+    const fixOfferNav = () => {
+      let scrollPosY = window.pageYOffset | document.body.scrollTop;
 
       if(scrollPosY > offer_nav_pos) {
         document.body.classList.add('sticky-offer-nav');
@@ -45,7 +47,11 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.classList.remove('sticky-offer-nav');
         WebT.elements.main_container.style.marginTop = '0px';
       }
-  };
+    };
+
+    window.addEventListener('load', fixOfferNav);
+    window.addEventListener('scroll', fixOfferNav);
+  }
 
   /* To top button show */
   const toTopButton = () => {
@@ -181,9 +187,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   
   /* Functions init */
-  if (WebT.elements.offer_nav) {
-    window.addEventListener('load', fixOfferNav);
-    window.addEventListener('scroll', fixOfferNav);
-  }
+
   window.addEventListener('scroll', toTopButton);
 });
