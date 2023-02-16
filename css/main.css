@@ -1583,10 +1583,39 @@ header {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #dcdcdc;
 }
+.footer-info__icon:hover,
+.--market-info:hover .footer-info__icon {
+  background-color: #fff;
+}
 
+.footer-info__icon > svg {
+  width: 24px;
+  height: 24px;
+}
+.--icon-fb:hover {
+  background: rgb(47, 92, 152);
+}
+.--icon-tw:hover {
+  background: rgb(49, 174, 231);
+}
+.--icon-yt:hover {
+  background: rgb(255, 0, 0);
+}
+.--icon-sp:hover {
+  background: rgb(29, 185, 84);
+}
+.--icon-ig:hover {
+  background: rgb(192, 170, 147);
+}
+
+.--social-icons .footer-info__icon:hover > svg path {
+  fill: #ffffff;
+}
 .footer-info__text {
   font-size: 14px;
   line-height: 18px;
